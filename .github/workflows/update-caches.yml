@@ -1,0 +1,51 @@
+name: Update Best Sellers Caches
+
+on:
+  schedule:
+    # Run every Saturday at 06:00 UTC (captures PublishNews Nielsen weekly update)
+    - cron: '0 6 * * 6'
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Specific source to scrape (or "all")'
+        required: false
+        default: 'all'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run scrapers
+        run: |
+          python run_scrapers.py --source "${{ github.event.inputs.source || 'all' }}"
+
+      - name: Commit and push changes if updated
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A publishnews/
+          if git diff --cached --quiet; then
+            echo "No cache updates detected."
+          else
+            git commit -m "chore(cache): update bestseller lists $(date -u +%Y-%m-%d)"
+            git push
+          fi

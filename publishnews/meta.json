@@ -1,0 +1,50 @@
+{
+  "source": "PublishNews — Weekly",
+  "updated_at": "2026-10-18T21:05:11.368625+00:00",
+  "categories": {
+    "semanal_0": 20,
+    "semanal_7": 20,
+    "semanal_9": 19,
+    "semanal_8": 20,
+    "semanal_10": 19
+  },
+  "total_books": 10,
+  "cadence": "weekly",
+  "categories_info": [
+    {
+      "id": "0",
+      "key": "semanal_0",
+      "slug": "geral",
+      "label": "General / Geral",
+      "url": "https://www.publishnews.com.br/ranking-nielsen.php/semanal/0"
+    },
+    {
+      "id": "7",
+      "key": "semanal_7",
+      "slug": "ficcao",
+      "label": "Fiction / Ficção",
+      "url": "https://www.publishnews.com.br/ranking-nielsen.php/semanal/7"
+    },
+    {
+      "id": "9",
+      "key": "semanal_9",
+      "slug": "nao_ficcao",
+      "label": "Trade Nonfiction / Não-ficção",
+      "url": "https://www.publishnews.com.br/ranking-nielsen.php/semanal/9"
+    },
+    {
+      "id": "8",
+      "key": "semanal_8",
+      "slug": "especialista",
+      "label": "Specialist Nonfiction / Não-ficção Especialista",
+      "url": "https://www.publishnews.com.br/ranking-nielsen.php/semanal/8"
+    },
+    {
+      "id": "10",
+      "key": "semanal_10",
+      "slug": "infantojuvenil",
+      "label": "Children and Young Adult / Infantojuvenil",
+      "url": "https://www.publishnews.com.br/ranking-nielsen.php/semanal/10"
+    }
+  ]
+}
