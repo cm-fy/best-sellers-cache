@@ -1,12 +1,12 @@
 {
   "source": "PublishNews — Weekly",
-  "updated_at": "2026-10-18T21:05:11.368625+00:00",
+  "updated_at": "2026-10-24T10:08:30.814222+00:00",
   "categories": {
-    "semanal_0": 20,
-    "semanal_7": 20,
-    "semanal_9": 19,
-    "semanal_8": 20,
-    "semanal_10": 19
+    "semanal_0": 0,
+    "semanal_7": 0,
+    "semanal_9": 0,
+    "semanal_8": 0,
+    "semanal_10": 0
   },
   "total_books": 10,
   "cadence": "weekly",
